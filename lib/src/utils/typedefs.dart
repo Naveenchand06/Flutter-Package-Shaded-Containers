@@ -1,0 +1,4 @@
+enum ShaderBorderRadius {
+  top,
+  bottom,
+}
