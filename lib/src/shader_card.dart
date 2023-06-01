@@ -10,6 +10,7 @@ class ShaderCard extends StatefulWidget {
     this.containerColor,
     this.shadeColor = Colors.black,
     this.borderRadiusGeometry,
+    this.shaderPadding = const EdgeInsets.all(8.0),
   });
 
   final double? height;
@@ -18,6 +19,7 @@ class ShaderCard extends StatefulWidget {
   final Widget? child;
   final Color? containerColor;
   final Color shadeColor;
+  final EdgeInsetsGeometry shaderPadding;
   final BorderRadiusGeometry? borderRadiusGeometry;
 
   @override
@@ -30,6 +32,7 @@ class _ShaderCardState extends State<ShaderCard> {
     return Container(
       height: widget.height,
       width: widget.width,
+      padding: widget.shaderPadding,
       decoration: BoxDecoration(
         borderRadius: widget.borderRadiusGeometry ??
             BorderRadius.circular(widget.borderRadius),
